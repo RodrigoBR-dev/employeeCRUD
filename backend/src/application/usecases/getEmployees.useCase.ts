@@ -1,5 +1,5 @@
-import { EmployeeRepository } from '../domain/employee.repository';
-import { Employee } from '../domain/employee.entity';
+import { Employee } from '../../domain/employee.entity';
+import { EmployeeRepository } from '../abstractions/employee.repository';
 
 export class GetEmployeesUseCase {
   constructor(private employeeRepository: EmployeeRepository) {}

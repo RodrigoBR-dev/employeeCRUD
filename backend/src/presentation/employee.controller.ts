@@ -1,13 +1,13 @@
 import { Request, Response } from 'express';
-import { CreateEmployeeUseCase } from '../../application/usecases/createEmployee.useCase';
-import { GetEmployeesUseCase } from '../../application/usecases/getEmployees.useCase';
-import { EmployeeDTO } from '../../application/domain/employee.dto';
+import { CreateEmployeeUseCase } from '../application/usecases/createEmployee.useCase';
+import { GetEmployeesUseCase } from '../application/usecases/getEmployees.useCase';
+import { EmployeeDTO } from '../commons/types/employee.dto';
 
 export class EmployeeController {
   constructor(
     private readonly createEmployeeUseCase: CreateEmployeeUseCase,
     private readonly getEmployeesUseCase: GetEmployeesUseCase,
-  ) {}
+  ) { }
 
   async createEmployee(req: Request, res: Response) {
     try {

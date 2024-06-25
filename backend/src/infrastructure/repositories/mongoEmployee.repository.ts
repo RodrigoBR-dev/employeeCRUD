@@ -1,6 +1,6 @@
 import { Model } from 'mongoose';
-import { EmployeeRepository } from '../../application/domain/employee.repository';
-import { Employee } from '../../application/domain/employee.entity';
+import { EmployeeRepository } from '../../application/abstractions/employee.repository';
+import { Employee } from '../../domain/employee.entity';
 
 export class MongoEmployeeRepository implements EmployeeRepository {
   constructor(private readonly model: Model<Employee>) {}

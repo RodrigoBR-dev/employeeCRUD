@@ -1,11 +1,11 @@
-import { EmployeeRepository } from '../domain/employee.repository';
-import { EmployeeDTO } from '../domain/employee.dto';
-import { Employee } from '../domain/employee.entity';
-import { CPF } from '../domain/cpf.value';
-import { Address } from '../domain/address.value';
+import { CPF } from '../../domain/cpf.value';
+import { Address } from '../../domain/address.value';
+import { Employee } from '../../domain/employee.entity';
+import { EmployeeRepository } from '../abstractions/employee.repository';
+import { EmployeeDTO } from '../../commons/types/employee.dto';
 
 export class CreateEmployeeUseCase {
-  constructor(private employeeRepository: EmployeeRepository) {}
+  constructor(private employeeRepository: EmployeeRepository) { }
 
   /**
    * Executes the creation of an employee in the database.
