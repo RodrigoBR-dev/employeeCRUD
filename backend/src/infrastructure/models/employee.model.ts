@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { Employee } from '../../application/domain/employee';
+import { Employee } from '../../application/domain/employee.entity';
 
 const employeeSchema = new Schema<Employee>({
   active: { type: Boolean, required: true },
