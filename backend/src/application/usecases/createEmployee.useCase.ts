@@ -2,7 +2,7 @@ import { CPF } from '../../domain/cpf.value';
 import { Address } from '../../domain/address.value';
 import { Employee } from '../../domain/employee.entity';
 import { EmployeeRepository } from '../abstractions/employee.repository';
-import { EmployeeDTO } from '../../commons/types/employee.dto';
+import { EmployeeDTO } from '../types/employee.dto';
 
 export class CreateEmployeeUseCase {
   constructor(private employeeRepository: EmployeeRepository) { }

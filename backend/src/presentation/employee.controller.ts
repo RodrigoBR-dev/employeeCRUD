@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { CreateEmployeeUseCase } from '../application/usecases/createEmployee.useCase';
 import { GetEmployeesUseCase } from '../application/usecases/getEmployees.useCase';
-import { EmployeeDTO } from '../commons/types/employee.dto';
+import { EmployeeDTO } from '../application/types/employee.dto';
 
 export class EmployeeController {
   constructor(

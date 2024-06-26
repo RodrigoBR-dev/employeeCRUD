@@ -1,0 +1,29 @@
+<h2>Adição de Funcionário</h2>
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  <label for="name">Nome:</label>
+  <input id="name" formControlName="name">
+  <label for="email">Email:</label>
+  <input id="email" formControlName="email" type="email">
+  <label for="cpf">CPF:</label>
+  <input id="cpf" formControlName="cpf">
+  <label for="hireDate">Data de Contratação:</label>
+  <input id="hireDate" formControlName="hireDate" type="date">
+  <label for="active">Ativo:</label>
+  <input id="active" formControlName="active" type="checkbox">
+  <label for="photo">URL da Foto:</label>
+  <input id="photo" formControlName="photo">
+  <fieldset formGroupName="address">
+    <legend>Endereço</legend>
+    <label for="street">Rua e Número:</label>
+    <input id="street" formControlName="street">
+    <label for="zip">CEP:</label>
+    <input id="zip" formControlName="zip">
+    <label for="neighborhood">Bairro:</label>
+    <input id="neighborhood" formControlName="neighborhood">
+    <label for="city">Cidade:</label>
+    <input id="city" formControlName="city">
+    <label for="state">Estado:</label>
+    <input id="state" formControlName="state">
+  </fieldset>
+  <button type="submit">Enviar</button>
+</form>

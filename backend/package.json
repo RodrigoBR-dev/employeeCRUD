@@ -14,7 +14,7 @@
         "test:unified": "jest --config ./test/config/jest.unified.config.js",
         "test:cov": "jest --config ./test/config/jest.unified.config.js --coverage",
         "docker:build": "docker compose up --build -d",
-        "docker:up": "docker compose up -d",
+        "docker:up": "docker compose up",
         "docker:down": "docker compose down"
     },
     "dependencies": {

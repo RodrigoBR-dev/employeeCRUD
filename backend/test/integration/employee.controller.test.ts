@@ -3,9 +3,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { CreateEmployeeUseCase } from '../../src/application/usecases/createEmployee.useCase';
 import { GetEmployeesUseCase } from '../../src/application/usecases/getEmployees.useCase';
-import { EmployeeController } from '../../src/infrastructure/controllers/employee.controller';
 import { MongoEmployeeRepository } from '../../src/infrastructure/repositories/mongoEmployee.repository';
 import EmployeeModel from '../../src/infrastructure/models/employee.model';
+import { EmployeeController } from '../../src/presentation/employee.controller';
 import { employeeData, employeeEntity } from '../stub/employee.stub';
 
 const app = express();

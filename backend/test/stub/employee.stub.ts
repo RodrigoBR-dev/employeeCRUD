@@ -1,7 +1,7 @@
-import { Employee } from '../../src/application/domain/employee.entity';
-import { EmployeeDTO } from '../../src/application/domain/employee.dto';
-import { CPF } from '../../src/application/domain/cpf.value';
-import { Address } from '../../src/application/domain/address.value';
+import { EmployeeDTO } from '../../src/application/types/employee.dto';
+import { Address } from '../../src/domain/address.value';
+import { CPF } from '../../src/domain/cpf.value';
+import { Employee } from '../../src/domain/employee.entity';
 
 export const employeeData: EmployeeDTO = {
   active: true,
