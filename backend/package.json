@@ -14,10 +14,11 @@
         "test:unified": "jest --config ./test/config/jest.unified.config.js",
         "test:cov": "jest --config ./test/config/jest.unified.config.js --coverage",
         "docker:build": "docker compose up --build -d",
-        "docker:up": "docker compose up",
+        "docker:up": "docker compose up -d",
         "docker:down": "docker compose down"
     },
     "dependencies": {
+        "cors": "^2.8.5",
         "cpf-cnpj-validator": "^1.0.3",
         "dotenv": "^8.2.0",
         "express": "^4.17.1",

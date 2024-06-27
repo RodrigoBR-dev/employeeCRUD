@@ -1,29 +1,61 @@
-<h2>Adição de Funcionário</h2>
-<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
-  <label for="name">Nome:</label>
-  <input id="name" formControlName="name">
-  <label for="email">Email:</label>
-  <input id="email" formControlName="email" type="email">
-  <label for="cpf">CPF:</label>
-  <input id="cpf" formControlName="cpf">
-  <label for="hireDate">Data de Contratação:</label>
-  <input id="hireDate" formControlName="hireDate" type="date">
-  <label for="active">Ativo:</label>
-  <input id="active" formControlName="active" type="checkbox">
-  <label for="photo">URL da Foto:</label>
-  <input id="photo" formControlName="photo">
-  <fieldset formGroupName="address">
-    <legend>Endereço</legend>
-    <label for="street">Rua e Número:</label>
-    <input id="street" formControlName="street">
-    <label for="zip">CEP:</label>
-    <input id="zip" formControlName="zip">
-    <label for="neighborhood">Bairro:</label>
-    <input id="neighborhood" formControlName="neighborhood">
-    <label for="city">Cidade:</label>
-    <input id="city" formControlName="city">
-    <label for="state">Estado:</label>
-    <input id="state" formControlName="state">
-  </fieldset>
-  <button type="submit">Enviar</button>
-</form>
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title">Adição de Funcionário</h5>
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-12">
+        <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="name">Nome:</label>
+            <input id="name" formControlName="name" class="form-control" placeholder="Nome">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input id="email" formControlName="email" type="email" class="form-control" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="cpf">CPF:</label>
+            <input id="cpf" formControlName="cpf" class="form-control" placeholder="CPF">
+          </div>
+          <div class="form-group">
+            <label for="hireDate">Data de Contratação:</label>
+            <input id="hireDate" formControlName="hireDate" type="date" class="form-control">
+          </div>
+          <div class="form-group form-check">
+            <input id="active" formControlName="active" type="checkbox" class="form-check-input">
+            <label for="active" class="form-check-label">Ativo</label>
+          </div>
+          <div class="form-group">
+            <label for="photo">URL da Foto:</label>
+            <input id="photo" formControlName="photo" class="form-control" placeholder="URL da Foto">
+          </div>
+          <fieldset formGroupName="address" class="border p-2">
+            <legend class="w-auto">Endereço</legend>
+            <div class="form-group">
+              <label for="street">Rua e Número:</label>
+              <input id="street" formControlName="street" class="form-control" placeholder="Rua e Número">
+            </div>
+            <div class="form-group">
+              <label for="neighborhood">Bairro:</label>
+              <input id="neighborhood" formControlName="neighborhood" class="form-control" placeholder="Bairro">
+            </div>
+            <div class="form-group">
+              <label for="city">Cidade:</label>
+              <input id="city" formControlName="city" class="form-control" placeholder="Cidade">
+            </div>
+            <div class="form-group">
+              <label for="state">Estado:</label>
+              <input id="state" formControlName="state" class="form-control" placeholder="Estado">
+            </div>
+            <div class="form-group">
+              <label for="zip">CEP:</label>
+              <input id="zip" formControlName="zip" class="form-control" placeholder="CEP">
+            </div>
+          </fieldset>
+          <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

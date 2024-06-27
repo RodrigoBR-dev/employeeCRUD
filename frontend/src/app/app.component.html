@@ -1,10 +1,12 @@
-<div class="container">
-  <h1>{{ title }}</h1>
+<div class="main-header">
+  <h1 class="card-title">{{ title }}</h1>
   <nav>
-    <ul>
-      <li><a routerLink="/">Lista de Funcionários</a></li>
-      <li><a routerLink="/create">Adicione Funcionário</a></li>
+    <ul class="navbar-header">
+      <li><a routerLink="/">Listar Funcionários</a></li>
+      <li><a routerLink="/create">Adicionar Funcionário</a></li>
     </ul>
   </nav>
+</div>
+<div class="container">
   <router-outlet></router-outlet>
 </div>

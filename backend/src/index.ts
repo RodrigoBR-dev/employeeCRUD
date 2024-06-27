@@ -1,11 +1,11 @@
 import 'dotenv/config';
 import express from 'express';
-import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import { employeeController } from './infrastructure/ioc';
 
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
 
 mongoose
   .connect(process.env.MONGODB_URI as string, {
@@ -15,8 +15,16 @@ mongoose
   .then(() => console.log('MongoDB connected'))
   .catch((err) => console.error(err));
 
-app.get('/api/employees', (req, res) => employeeController.getEmployees(req, res));
-app.post('/api/employees', (req, res) => employeeController.createEmployee(req, res));
+app.use(cors());
+
+app.get('/api/employees', (req, res) => {
+  console.log('getEmployees controller');
+  employeeController.getEmployees(req, res);
+});
+app.post('/api/employees', (req, res) => {
+  console.log('createEmployee controller', req.body);
+  employeeController.createEmployee(req, res)
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

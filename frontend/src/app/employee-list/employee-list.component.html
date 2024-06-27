@@ -1,6 +1,25 @@
-<h2>Lista de Funcionários</h2>
-<ul>
-  <li *ngFor="let employee of employees">
-    {{ employee.name }} - {{ employee.email }}
-  </li>
-</ul>
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title">Lista de Funcionários</h5>
+  </div>
+  <table id="employeeTable" class="table table-striped mt-3" style="width:100%">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>CPF</th>
+        <th>Data Contratação</th>
+        <th>Ativo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.email }}</td>
+        <td>{{ employee.cpf }}</td>
+        <td>{{ employee.hireDate | date }}</td>
+        <td>{{ employee.active ? 'Sim' : 'Não' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

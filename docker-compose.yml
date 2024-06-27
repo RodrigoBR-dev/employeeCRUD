@@ -4,16 +4,16 @@ services:
     ports:
       - '3000:3000'
     environment:
-      - MONGODB_URI=mongodb://mongo:27017/employees
+      - MONGODB_URI=mongodb://local:local@mongo:27017/employees?authSource=admin
     depends_on:
       - mongo
 
-  # frontend:
-  #   build: ./frontend
-  #   ports:
-  #     - '4200:4200'
-  #   environment:
-  #     - NODE_ENV=development
+  frontend:
+    build: ./frontend
+    ports:
+      - '8080:80'
+    environment:
+      - NODE_ENV=development
 
   mongo:
     image: mongo:6
